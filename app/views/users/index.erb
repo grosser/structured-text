@@ -1,16 +1,22 @@
-<table>
+<table class=top_aligned>
   <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Identifier</th>
-    <th>Created</th>
+    <th></th>
+    <th></th>
   </tr>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.name %></td>
-      <td><%= user.email %></td>
-      <td><%= user.identifier %></td>
-      <td><%= user.created_at %></td>
+      <td>
+        <%= link_to_object user %> <br />
+        <%= user.email %> <br />
+        <%= user.created_at %>
+      </td>
+      <td>
+        <% user.rpx_identifiers.each do |rpx_identifier| %>
+          <%= rpx_identifier.identifier %> <br />
+          <%= rpx_identifier.raw.inspect %>
+          <hr />
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

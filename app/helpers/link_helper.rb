@@ -1,5 +1,5 @@
 module LinkHelper
-  def link_to_object(object, options)
+  def link_to_object(object, options={})
     link_to name_for_object(object), path_for_object(object), options
   end
 

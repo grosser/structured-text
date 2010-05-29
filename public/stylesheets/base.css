@@ -1,3 +1,7 @@
 .left{float:left}
 .right{float:right}
 .clear{clear:both}
+
+table.top_aligned td{
+  vertical-align: top;
+}
