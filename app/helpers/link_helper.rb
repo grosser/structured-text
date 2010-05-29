@@ -11,7 +11,8 @@ module LinkHelper
 
   def path_for_object(object)
     case object
-    when User then "/#{object.name}"
+    when User then "/#{object.to_param}"
+    when Document then "/#{object.user.to_param}/#{object.to_param}"    
     else object
     end
   end

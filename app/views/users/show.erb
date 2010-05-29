@@ -1,1 +1,6 @@
 Hello I am <%= @user.name %> and this is my page!
+
+<h2>My documents</h2>
+<% @user.documents.each do |document| %>
+  <%= link_to_object document %> <%= document.updated_at %> <br />
+<% end %>

@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
   before_validation :make_name_url_friendly, :on => :create
 
   has_many :rpx_identifiers, :class_name => 'RPXIdentifier'
+  has_many :documents
+
+  def to_param
+    name
+  end
 
   private
 
@@ -11,21 +16,14 @@ class User < ActiveRecord::Base
     raise unless new_record?
 
     self.name = 'unnamed' if name.blank? or name =~ /^\d*$/ 
-    self.name = clean_name(name)
+    self.name = name.to_slug
 
     counter = 2
     original_name = name
     while someone_has_this_name
-      self.name = clean_name("#{original_name}-#{counter}")
+      self.name = "#{original_name}-#{counter}".to_slug
       counter += 1
     end
-  end
-
-  def clean_name(name)
-    name = name.to_ascii
-    name = name.gsub(/[^-a-zA-Z\d]/, '-')
-    name = name.gsub(/-+/,'-') # --- -> -
-    name.gsub(/^-+/,'').gsub(/-+$/,'') # --a-- -> a
   end
 
   def someone_has_this_name
