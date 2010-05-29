@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :name, :if => :name_changed?
   before_validation :make_name_url_friendly, :on => :create
 
+  has_many :rpx_identifiers, :class_name => 'RPXIdentifier'
+
   private
 
   def make_name_url_friendly

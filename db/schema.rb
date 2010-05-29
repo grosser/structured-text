@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(:version => 20100529104438) do
     t.datetime "updated_at"
   end
 
+  create_table "rpx_identifiers", :force => true do |t|
+    t.string  "identifier", :null => false
+    t.integer "user_id",    :null => false
+    t.text    "raw"
+  end
+
+  add_index "rpx_identifiers", ["identifier"], :name => "index_rpx_identifiers_on_identifier", :unique => true
+
   create_table "sections", :force => true do |t|
     t.string   "title"
     t.text     "text"
@@ -29,13 +37,12 @@ ActiveRecord::Schema.define(:version => 20100529104438) do
   add_index "sections", ["ancestry"], :name => "index_sections_on_ancestry"
 
   create_table "users", :force => true do |t|
-    t.string "identifier", :null => false
-    t.string "email",      :null => false
-    t.string "name",       :null => false
+    t.string   "name",       :null => false
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
-  add_index "users", ["identifier"], :name => "index_users_on_identifier", :unique => true
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true
 
 end
