@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Structured Text</title>
+    <%= stylesheet_link_tag 'reset', 'base' %>
+    <%= javascript_link_tag :jquery, :rails %>
+  </head>
+  <body>
+    <div>
+      <div><%= link_to 'Home', '/' %></div>
+      <div><%= render 'layouts/user' %></div>
+      <%= render 'layouts/flash' %>
+    </div>
+    <br />
+    <div><%= yield %></div>
+  </body>
+</html>
