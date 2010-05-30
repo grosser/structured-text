@@ -16,4 +16,5 @@ module LinkHelper
     else object
     end
   end
+  module_function :path_for_object
 end

@@ -6,6 +6,7 @@ gem 'will_paginate', :git => "git://github.com/mislav/will_paginate.git", :branc
 gem 'rpx_now'
 gem 'ancestry', :git => 'git://github.com/logicaltext/ancestry.git', :branch => 'rails3'
 gem 'unidecoder', :git => 'git://github.com/norman/unidecoder.git'
+gem 'resource_controller'
 
 group :test do
   gem "rspec-rails", ">= 2.0.0.beta.9"

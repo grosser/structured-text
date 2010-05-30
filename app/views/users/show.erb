@@ -4,3 +4,5 @@ Hello I am <%= @user.name %> and this is my page!
 <% @user.documents.each do |document| %>
   <%= link_to_object document %> <%= document.updated_at %> <br />
 <% end %>
+
+<%= link_to 'New', new_document_path %>

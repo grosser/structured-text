@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_filter :login_required, :only => [:new, :create]
   skip_before_filter :verify_authenticity_token, :only => [:create]
 
   def show
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    if data = RPXNow.user_data(params[:token], :additional => [:raw])
+    if data = RPXNow.user_data(params[:token], :additional => [:raw], :extended => true)
       self.current_user = RPXIdentifier.find_or_create_user(data)
       redirect_to '/'
     else

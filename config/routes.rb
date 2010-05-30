@@ -1,5 +1,6 @@
 StructuredText::Application.routes.draw do
-  root :to => "users#index"
+  root :to => "documents#index"
+
   resources :users
   resources :documents
   resources :sections
