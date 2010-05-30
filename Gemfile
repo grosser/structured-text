@@ -7,6 +7,7 @@ gem 'rpx_now'
 gem 'ancestry', :git => 'git://github.com/logicaltext/ancestry.git', :branch => 'rails3'
 gem 'unidecoder', :git => 'git://github.com/norman/unidecoder.git'
 gem 'inherited_resources'
+gem 'acts_as_list', :git => 'git://github.com/nono/acts_as_list.git', :branch => 'rails3'
 
 group :test do
   gem "rspec-rails", ">= 2.0.0.beta.9"

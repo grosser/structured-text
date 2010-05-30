@@ -1,0 +1,170 @@
+--- 
+dependencies: 
+  acts_as_list: 
+    group: 
+    - :default
+    version: ">= 0"
+  unidecoder: 
+    group: 
+    - :default
+    version: ">= 0"
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta3
+  sqlite3-ruby: 
+    group: 
+    - :default
+    version: ">= 0"
+    require: 
+    - sqlite3
+  ancestry: 
+    group: 
+    - :default
+    version: ">= 0"
+  inherited_resources: 
+    group: 
+    - :default
+    version: ">= 0"
+  rspec-rails: 
+    group: 
+    - :test
+    version: ">= 2.0.0.beta.9"
+  factory_girl: 
+    group: 
+    - :test
+    version: ">= 0"
+  will_paginate: 
+    group: 
+    - :default
+    version: ">= 0"
+  rpx_now: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.3.7
+- memcache-client: 
+    version: 1.8.3
+- tzinfo: 
+    version: 0.3.22
+- activesupport: 
+    version: 3.0.0.beta3
+- activemodel: 
+    version: 3.0.0.beta3
+- erubis: 
+    version: 2.6.5
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.3
+- rack-test: 
+    version: 0.5.4
+- actionpack: 
+    version: 3.0.0.beta3
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.7
+- mail: 
+    version: 2.2.1
+- text-hyphen: 
+    version: 1.0.0
+- text-format: 
+    version: 1.0.0
+- actionmailer: 
+    version: 3.0.0.beta3
+- arel: 
+    version: 0.3.3
+- activerecord: 
+    version: 3.0.0.beta3
+- activeresource: 
+    version: 3.0.0.beta3
+- acts_as_list: 
+    version: 0.2.0
+    source: 1
+- ancestry: 
+    version: 1.2.0
+    source: 3
+- bundler: 
+    version: 0.9.25
+- diff-lcs: 
+    version: 1.1.2
+- factory_girl: 
+    version: 1.2.3
+    source: 0
+- has_scope: 
+    version: 0.5.0
+- responders: 
+    version: 0.6.1
+- inherited_resources: 
+    version: 1.1.2
+- json_pure: 
+    version: 1.4.3
+- nokogiri: 
+    version: 1.4.2
+- thor: 
+    version: 0.13.6
+- railties: 
+    version: 3.0.0.beta3
+- rails: 
+    version: 3.0.0.beta3
+- rpx_now: 
+    version: 0.6.21
+- rspec-core: 
+    version: 2.0.0.beta.9
+- rspec-expectations: 
+    version: 2.0.0.beta.9
+- rspec-mocks: 
+    version: 2.0.0.beta.9
+- rspec: 
+    version: 2.0.0.beta.9
+- webrat: 
+    version: 0.7.1
+- rspec-rails: 
+    version: 2.0.0.beta.9.1
+- sqlite3-ruby: 
+    version: 1.2.5
+- unidecoder: 
+    version: 1.0.0
+    source: 2
+- will_paginate: 
+    version: 3.0.pre
+    source: 4
+hash: 1d3eb273e39ab83ad4b2becb22b0a859a0a78eb9
+sources: 
+- Git: 
+    uri: git://github.com/thoughtbot/factory_girl.git
+    branch: rails3
+    git: git://github.com/thoughtbot/factory_girl.git
+    ref: feac7298352a83fef0717d8beadd2eda9aabfe56
+- Git: 
+    uri: git://github.com/nono/acts_as_list.git
+    branch: rails3
+    git: git://github.com/nono/acts_as_list.git
+    ref: f5273267c59eb41c88332da9271f130cad20d562
+- Git: 
+    uri: git://github.com/norman/unidecoder.git
+    git: git://github.com/norman/unidecoder.git
+    ref: b85f929da901b4ddf82dcb96a73483f77a993db9
+- Git: 
+    uri: git://github.com/logicaltext/ancestry.git
+    branch: rails3
+    git: git://github.com/logicaltext/ancestry.git
+    ref: 5a86052229c3875955bd7a4b9a2de71ba477b08b
+- Git: 
+    uri: git://github.com/mislav/will_paginate.git
+    branch: rails3
+    git: git://github.com/mislav/will_paginate.git
+    ref: 60aa1c7b2ef03ee7c7a5ed657efb479a69f7d128
+- Rubygems: 
+    uri: http://rubygems.org

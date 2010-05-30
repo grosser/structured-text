@@ -1,1 +1,5 @@
 <%= @document.title %>
+
+<% @document.section.each do |section| %>
+  <%= render 'sections/form' %>
+<% end %>

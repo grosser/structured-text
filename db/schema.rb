@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100529104438) do
+ActiveRecord::Schema.define(:version => 20100530142647) do
 
   create_table "documents", :force => true do |t|
     t.integer  "user_id",    :null => false
@@ -32,9 +32,15 @@ ActiveRecord::Schema.define(:version => 20100529104438) do
     t.string   "ancestry"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "document_id", :null => false
+    t.integer  "position",    :null => false
+    t.integer  "parent_id"
   end
 
   add_index "sections", ["ancestry"], :name => "index_sections_on_ancestry"
+  add_index "sections", ["document_id"], :name => "index_sections_on_document_id"
+  add_index "sections", ["parent_id"], :name => "index_sections_on_parent_id"
+  add_index "sections", ["position"], :name => "index_sections_on_position"
 
   create_table "users", :force => true do |t|
     t.string   "name",       :null => false
