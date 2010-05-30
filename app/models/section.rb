@@ -1,3 +1,6 @@
 class Section < ActiveRecord::Base
-  has_ancestry :orphan_strategy => :destroy
+  belongs_to :document
+  belongs_to :parent, :class_name => 'Section'
+
+  acts_as_list
 end

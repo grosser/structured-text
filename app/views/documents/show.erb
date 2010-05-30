@@ -1,5 +1,7 @@
 <%= @document.title %>
 
-<% @document.section.each do |section| %>
-  <%= render 'sections/form' %>
+<% @document.sections.each do |section| %>
+  <%= render 'sections/form', :section => section %>
 <% end %>
+
+<%= render 'sections/form', :section => @document.sections.build %>
