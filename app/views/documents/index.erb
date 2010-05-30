@@ -1,0 +1,4 @@
+<%= link_to 'new', new_document_path %> <br />
+<% collection.each do |document| %>
+  <%= link_to_object document %> <br />
+<% end %>

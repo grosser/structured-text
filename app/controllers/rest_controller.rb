@@ -1,9 +1,10 @@
 class RestController < ApplicationController
-  resource_controller
+  inherit_resources
+  include InheritedResources::DSL
 
   protected
 
   def collection
-    @collection ||= current_model.paginate(:per_page => 20, :page => params[:page])
+    @collection ||= resource_class.paginate(:per_page => 20, :page => params[:page])
   end
 end

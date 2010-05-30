@@ -6,6 +6,8 @@ module LinkHelper
   def name_for_object(object)
     case object
     when User then object.name
+    when Document then object.title    
+    else object.to_s
     end
   end
 
