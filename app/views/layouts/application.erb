@@ -2,8 +2,7 @@
   <head>
     <title>Structured Text</title>
     <%= csrf_meta_tag %>
-    <%= css_tag 'reset', 'base' %>
-    <%= js_tag :jquery %>
+    <%= css_tag 'reset', 'base', 'application' %>
   </head>
   <body>
     <div>
@@ -13,5 +12,6 @@
     </div>
     <br />
     <div><%= yield %></div>
+    <%= js_tag 'jquery', 'rails', 'jquery.jeditable', 'application' %>
   </body>
 </html>

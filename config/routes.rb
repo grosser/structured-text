@@ -3,7 +3,12 @@ StructuredText::Application.routes.draw do
 
   resources :users
   resources :documents
-  resources :sections
+  resources :sections do
+    collection do
+      get :inplace
+      post :inplace
+    end
+  end
 
   match ":id", :to => "users#show"
   match ":user/:id", :to => "documents#show"

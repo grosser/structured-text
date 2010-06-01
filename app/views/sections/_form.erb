@@ -1,7 +1,6 @@
 <%= form_for section do |f| %>
   <%= f.hidden_field :document_id %>
   <%= f.hidden_field :parent_id %>
-  <%= f.text_field :title %> <br />
-  <%= f.text_area :text %><br />
-  <%= f.submit %>
+  <div class="section_title_edit" id=<%= "title_#{section.id}" %> ><%= section.title %></div>
+  <div class="section_text_edit" id=<%= "text_#{section.id}" %> ><%= section.text %></div>
 <% end %>

@@ -4,4 +4,4 @@
   <%= render 'sections/form', :section => section %>
 <% end %>
 
-<%= render 'sections/form', :section => @document.sections.build %>
+<%= link_to 'Add new section', :url => sections_path(:document_id => @document.id), :method => :post, :remote => true %>
