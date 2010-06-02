@@ -8,3 +8,9 @@ class String
     slug
   end
 end
+
+class String
+  def markdown_to_html
+    Markdown.new(self).to_html
+  end
+end

@@ -1,10 +1,10 @@
 --- 
 dependencies: 
-  acts_as_list: 
+  unidecoder: 
     group: 
     - :default
     version: ">= 0"
-  unidecoder: 
+  acts_as_list: 
     group: 
     - :default
     version: ">= 0"
@@ -35,6 +35,10 @@ dependencies:
     - :test
     version: ">= 0"
   will_paginate: 
+    group: 
+    - :default
+    version: ">= 0"
+  rdiscount: 
     group: 
     - :default
     version: ">= 0"
@@ -74,7 +78,7 @@ specs:
 - polyglot: 
     version: 0.3.1
 - treetop: 
-    version: 1.4.7
+    version: 1.4.8
 - mail: 
     version: 2.2.1
 - text-hyphen: 
@@ -118,6 +122,8 @@ specs:
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
+- rdiscount: 
+    version: 1.6.3.2
 - rpx_now: 
     version: 0.6.21
 - rspec-core: 
@@ -140,7 +146,7 @@ specs:
 - will_paginate: 
     version: 3.0.pre
     source: 4
-hash: 1d3eb273e39ab83ad4b2becb22b0a859a0a78eb9
+hash: a9ecf9d4a950c72c62eb8f5ca3602ca1bb8fc30f
 sources: 
 - Git: 
     uri: git://github.com/thoughtbot/factory_girl.git

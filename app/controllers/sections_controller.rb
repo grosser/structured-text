@@ -8,7 +8,11 @@ class SectionsController < RestController
   def inplace
     attribute, id = params[:id].split('_')
     section = Section.find(id)
-    section.update_attribute(attribute, params[:value]) if request.post?
-    render :text => section[attribute]
+    if request.post?
+      section.update_attribute(attribute, params[:value])
+      render :text => section[attribute].markdown_to_html
+    else
+      render :text => section[attribute]
+    end
   end
 end

@@ -1,6 +1,6 @@
 <%= form_for section do |f| %>
   <%= f.hidden_field :document_id %>
   <%= f.hidden_field :parent_id %>
-  <div class="section_title_edit" id=<%= "title_#{section.id}" %> ><%= section.title %></div>
-  <div class="section_text_edit" id=<%= "text_#{section.id}" %> ><%= section.text %></div>
+  <h3><%= inplace_edit section, :title %></h3>
+  <%= inplace_edit section, :text, :markdown => true %>
 <% end %>
